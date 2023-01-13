@@ -11,6 +11,8 @@ screen.tracer(0)
 right_paddle = Paddle((350, 0))
 left_paddle = Paddle((-350, 0))
 
+ball = Ball()
+
 screen.listen()
 screen.onkey(right_paddle.up, "Up")
 screen.onkey(right_paddle.down, "Down")
