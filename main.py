@@ -1,5 +1,6 @@
 from turtle import Screen
 from paddle import Paddle
+from ball import Ball
 import time
 
 screen = Screen()
@@ -7,8 +8,8 @@ screen.screensize(canvwidth=800, canvheight=600, bg="black")
 screen.title("Pong")
 screen.tracer(0)
 
-right_paddle = Paddle()
-left_paddle = Paddle()
+right_paddle = Paddle((350, 0))
+left_paddle = Paddle((-350, 0))
 
 screen.listen()
 screen.onkey(right_paddle.up, "Up")

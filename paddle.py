@@ -6,25 +6,13 @@ DOWN = 270
 
 
 class Paddle(Turtle):
-    def __init__(self):
+    def __init__(self, position):
         super().__init__()
-        self.create_right_paddle()
-        self.create_left_paddle()
-
-    def create_right_paddle(self):
-        right_paddle = Turtle("square")
-        right_paddle.turtlesize(stretch_len=STRETCH_L, stretch_wid=STRETCH_W)
-        right_paddle.color("white")
-        right_paddle.penup()
-        right_paddle.goto(350, 0)
-
-    def create_left_paddle(self):
-        right_paddle = Turtle("square")
-        right_paddle.turtlesize(stretch_len=STRETCH_L, stretch_wid=STRETCH_W)
-        right_paddle.color("white")
-        right_paddle.penup()
-        right_paddle.goto(-350, 0)
-
+        self.shape("square")
+        self.turtlesize(stretch_len=STRETCH_L, stretch_wid=STRETCH_W)
+        self.color("white")
+        self.penup()
+        self.goto(position)
 
     def up(self):
         new_y = self.ycor() + 20
